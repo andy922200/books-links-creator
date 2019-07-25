@@ -13,7 +13,7 @@ body {
   background-color: #fff;
 }
 
-* {
+*{
   /*border-box：實際寬高＝所設定的數值(已包含border和padding)*/
   box-sizing: border-box;
 }
@@ -54,7 +54,20 @@ nav a .btn{
   padding:10px 20px;
 }
 
+.card{
+  border-style:none;
+}
 
+.card h5{
+  margin-top:10px;
+  font-size:28px;
+  text-align: center;
+}
+
+.card label{
+  font-size:24px;
+  margin:10px auto;
+}
 
 /*RWD*/
 @media screen and (min-width:415px) and (max-width:500px){

@@ -6,11 +6,9 @@ const linkSchema = new Schema({
     type: String,
     required: true
   },
-  nickname: {
-    type: String
-  },
   date: {
-    type: String
+    type: String,
+    required: true
   },
   link: {
     type: String,
@@ -19,7 +17,6 @@ const linkSchema = new Schema({
   tinyurlLink: {
     type: String,
   }
-
 })
 
 module.exports = mongoose.model('link', linkSchema)

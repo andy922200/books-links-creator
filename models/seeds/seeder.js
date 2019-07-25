@@ -24,7 +24,6 @@ db.once('open', () => {
     formatDate = year + '-' + (month + 1) + '-' + date
     Link.create({
       name: 'Title',
-      nickname: 'This is a description with lots of information. Go on and keep going!',
       date: formatDate,
       link: 'https://www.books.com.tw/link/jshdksdhsdjfhdsjfwerty',
       tinyurlLink: 'https://tinyurl.com/7k3bdac'

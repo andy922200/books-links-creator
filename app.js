@@ -21,8 +21,17 @@ if (process.env.NODE_ENV !== 'production') {
 }
 
 // connect with database
+mongoose.connect('mongodb://localhost/link', { useNewUrlParser: true, useCreateIndex: true })
+const db = mongoose.connection
+db.on('error', () => {
+  console.log('mongodb error!')
+})
+db.once('open', () => {
+  console.log('mongodb connected!')
+})
 
 // load record model
+const Link = require('./models/link')
 
 // template engine setting
 app.engine('handlebars', expressHandlebars({ defaultLayout: 'main' }))
@@ -57,4 +66,4 @@ app.use(passport.session())
 
 // load router settings
 app.use('/', require('./routes/home'))
-//app.use('/links', require('./routes/links'))
+app.use('/links', require('./routes/links'))

@@ -7,9 +7,6 @@ const Link = require('../models/link.js')
 // index router
 router.get('/', (req, res) => {
   res.render('index', { css: ['index.css'] })
-
-
-
 })
 
 module.exports = router

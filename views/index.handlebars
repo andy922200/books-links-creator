@@ -1,2 +1,32 @@
 <!-- ./views/index.handlebars-->
-<h2>Hello World!</h2>
+<div class="card">
+  <div class="card-body mx-auto">
+    <img src="https://picsum.photos/300" alt="Title logo">
+    <h5>博客來推廣連結產生器</h5>
+    <form method="POST" action="/links">
+      <div class="form-group">
+        <label for="bookName">書籍名稱</label>
+        <input type="text" class="form-control" id="bookName" name="bookName" placeholder="請輸入書籍名稱"
+          value="{{bookName}}">
+      </div>
+      <div class="form-group">
+        <label for="originalLink">原始連結</label>
+        <input type="text" class="form-control" id="originalLink" name="originalLink" placeholder="請輸入要轉換的網址"
+          value="{{originalLink}}">
+      </div>
+      <button type="submit" class="btn btn-primary">轉換</button>
+    </form>
+    <div class="form-group">
+      <label for="result">轉換結果</label>
+      <input type="text" readonly class="form-control-plaintext" id="result" value="{{result}}">
+      <button id="clearAll" type="submit" class="btn btn-secondary">清除選單</button>
+      <script type="text/javascript">
+        $("#clearAll").click(function () {
+          $(".card input").each(function () {
+            $(this).val('')
+          })
+        })
+      </script>
+    </div>
+  </div>
+</div>
