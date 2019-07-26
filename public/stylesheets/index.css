@@ -37,6 +37,7 @@ header {
 img {
   height: auto;
   display: block;
+  margin: 0px auto;
 }
 
 /*清除浮動效果，讓高度出現，方法II*/
@@ -67,6 +68,11 @@ nav a .btn{
 .card label{
   font-size:24px;
   margin:10px auto;
+}
+
+.card input{
+  margin:10px auto;
+  border: 1px solid black;
 }
 
 /*RWD*/
